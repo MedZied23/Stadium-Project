@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1010.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginPageController">
+    <stylesheets>
+        <URL value="@/Styles/stadebuilder.css" />
+    </stylesheets>
+    <children>
+      <VBox prefHeight="1010.0" prefWidth="958.0" style="-fx-background-color: #f5f5f5;">
+         <children>
+            <ImageView fitHeight="278.0" fitWidth="238.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets left="350.0" top="200.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../img/la-personne.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="86.0" prefWidth="351.0" text="Email " textFill="#34458d">
+               <VBox.margin>
+                  <Insets left="200.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="UserName" prefHeight="26.0" prefWidth="594.0" style="-fx-pref-height: 50;">
+               <VBox.margin>
+                  <Insets left="200.0" right="200.0" />
+               </VBox.margin>
+            </TextField>
+            <Label prefHeight="86.0" prefWidth="351.0" text="password" textFill="#34458d">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="21.0" />
+               </font>
+               <padding>
+                  <Insets left="200.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="UserPassword" prefHeight="26.0" prefWidth="594.0" style="-fx-pref-height: 50; radius: 50;">
+               <VBox.margin>
+                  <Insets left="200.0" right="200.0" />
+               </VBox.margin>
+            </TextField>
+            <Button fx:id="LoginButton" mnemonicParsing="false" onAction="#handleLogin" prefHeight="74.0" prefWidth="200.0" style="-fx-background-color: #34458d;" text="Login" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="370.0" top="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="26.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox prefHeight="1010.0" prefWidth="962.0" style="-fx-background-color: #34458d;">
+         <children>
+            <ImageView fitHeight="291.0" fitWidth="298.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets left="350.0" top="160.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../img/stade.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="168.0" prefWidth="822.0" text="Welcome to our stadium ! " textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+               <VBox.margin>
+                  <Insets left="140.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Bernard MT Condensed" size="73.0" />
+               </font>
+            </Label>
+            <Label prefHeight="61.0" prefWidth="558.0" text="Embark on the journey of a lifetime with us" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="28.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="230.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</HBox>

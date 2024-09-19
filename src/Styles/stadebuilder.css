@@ -1,0 +1,132 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.button-style {
+    -fx-background-color: #34458d;
+    -fx-border-style: none;
+    -fx-background-radius: 0;
+    -fx-text-fill: white;
+    -fx-font-family: "Canva Sans";
+    -fx-font-size: 15px;
+}
+
+
+.button-style2 {
+    -fx-background-color: #5271FF;
+    -fx-border-style: none;
+    -fx-background-radius: 0;
+    -fx-text-fill: white;
+    -fx-font-family: "Canva Sans";
+    -fx-font-size: 15px;
+}
+
+.bold{
+    -fx-font-weight: bold;
+}
+
+.subtitle-text {
+    -fx-text-fill: #000080; /* Text color */
+    -fx-font-family: "Canva Sans"; /* Font family */
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;/* Font size */
+    /* Add more styling properties as needed */
+}
+
+.saveButton {
+    -fx-background-color: #34458d;
+    -fx-border-style: none;
+    -fx-background-radius: 0;
+    -fx-text-fill: white;
+    -fx-font-family: "Canva Sans";
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.label-style {
+    -fx-text-fill: #000080; /* Label text color */
+    -fx-font-family: "Canva Sans"; /* Font family for labels */
+    -fx-font-size: 20px;
+    -fx-fill: #000080;/* Font size for labels */
+     /* Make the label text bold */
+    /* Add more styling properties as needed */
+}
+
+.textfield-style {
+    -fx-background-color: #FFFFFF; /* Textfield background color */
+    -fx-text-fill: black; /* Text color inside the textfield */
+    -fx-font-family: "Canva Sans"; /* Font family for textfields */
+    -fx-font-size: 14px;
+    -fx-background-radius: 0;/* Font size for textfields */
+    /* Add more styling properties as needed #000080*/
+}
+
+
+.sectionName-style {
+    -fx-background-color: #000080;
+    -fx-text-fill: white;
+    -fx-font-family: "Canva Sans";
+    -fx-font-size: 20px;
+}
+
+
+.sectionPrice-style {
+    -fx-background-color: #5271ff;
+    -fx-text-fill: white;
+    -fx-font-family: "Canva Sans";
+    -fx-font-size: 20px;
+    -fx-background-radius: 0;
+}
+
+.prices-style {
+    -fx-background-color: #000080;
+    -fx-text-fill: white;
+    -fx-font-family: "Canva Sans";
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.smallTitle-style{
+    -fx-text-fill: #000080; /* Text color */
+    -fx-font-family: "Canva Sans"; /* Font family */
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+
+.smallTitle2-style{
+    -fx-text-fill: #000080; /* Text color */
+    -fx-font-family: "Canva Sans"; /* Font family */
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.Description-style{
+    -fx-text-fill: #000080; /* Text color */
+    -fx-font-family: "Canva Sans"; /* Font family */
+    -fx-font-size: 24px;
+}
+
+.artistNames-style{
+    -fx-text-fill: #000080; /* Text color */
+    -fx-font-family: "Canva Sans"; /* Font family */
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.ConcertTitle-style{
+    -fx-text-fill: #ff0000; /* Text color */
+    -fx-font-family: "Canva Sans"; /* Font family */
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+.white-checkbox .box {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+.Event-display {
+    -fx-background-color: #c8c9d0; /* Specify your desired background color */
+}

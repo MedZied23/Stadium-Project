@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane id="StadeBuilderId" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1010.0" prefWidth="1920.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StadeViewerController">
+   <children>
+      <BorderPane prefHeight="1010.0" prefWidth="1920.0">
+         <stylesheets>
+            <URL value="@/Styles/stadebuilder.css" />
+         </stylesheets>
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="83.0" prefWidth="1920.0" style="-fx-background-color: #34458d;" BorderPane.alignment="CENTER">
+               <children>
+                  <Region prefHeight="83.0" prefWidth="30.0" />
+                  <StackPane prefHeight="83.0" prefWidth="7.0">
+                     <children>
+                        <Circle fill="DODGERBLUE" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" wrappingWidth="18.984375">
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </StackPane>
+                  <Region prefHeight="83.0" prefWidth="12.0" />
+                  <Text fx:id="UserName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Ayoub Zerdoum ">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+                  <Region prefHeight="83.0" prefWidth="124.0" />
+                  <ImageView fx:id="MenuEvents" fitHeight="55.0" fitWidth="48.0" onMouseClicked="#handleEvent" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/list-2-128.png" />
+                     </image>
+                  </ImageView>
+                  <Region prefHeight="83.0" prefWidth="25.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="62.0" stroke="BLACK" strokeType="INSIDE" width="5.0" />
+                  <Region prefHeight="83.0" prefWidth="25.0" />
+                  <ImageView fitHeight="150.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/stadium-128.png" />
+                     </image>
+                  </ImageView>
+                  <Region layoutX="449.0" layoutY="10.0" prefHeight="83.0" prefWidth="25.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="62.0" layoutX="474.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="5.0" />
+                  <Region layoutX="479.0" layoutY="10.0" prefHeight="83.0" prefWidth="25.0" />
+                  <ImageView fx:id="MenuTickets" fitHeight="150.0" fitWidth="56.0" layoutX="504.0" layoutY="24.0" onMouseClicked="#handleTickets" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/ticket-128.png" />
+                     </image>
+                  </ImageView>
+                  <Region layoutX="560.0" layoutY="10.0" prefHeight="83.0" prefWidth="25.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="62.0" layoutX="585.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="5.0" />
+                  <Region layoutX="590.0" layoutY="10.0" prefHeight="83.0" prefWidth="25.0" />
+                  <ImageView fx:id="MenuShop" fitHeight="150.0" fitWidth="56.0" layoutX="615.0" layoutY="24.0" onMouseClicked="#handleShop" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/cart-59-128.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </top>
+         <right>
+            <VBox prefHeight="928.0" prefWidth="297.0" style="-fx-background-color: #ADBAB7;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" prefWidth="150.0" style="-fx-background-color: #ADBAB7;">
+                     <children>
+                        <HBox prefHeight="27.0" prefWidth="150.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="23.0" prefWidth="297.0" styleClass="subtitle-text" text="Votre Espace" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Line endX="116.87867736816406" endY="4.76837158203125E-6" startX="-50.0" startY="2.384185791015625E-6" stroke="WHITE" strokeWidth="3.0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Line>
+                        <GridPane fx:id="MySpaceGrid" alignment="CENTER" hgap="10.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="127.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="95.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="10.0" prefWidth="44.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label fx:id="SiegeTitle" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" styleClass="smallTitle2-style" stylesheets="@../Styles/stadebuilder.css" text="Siege" />
+                              <Label fx:id="PriceTitle" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="150.0" styleClass="smallTitle2-style" stylesheets="@../Styles/stadebuilder.css" text="Price" GridPane.columnIndex="1" />
+                              <Label fx:id="YourSiege1" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="S11 - 36" GridPane.rowIndex="1" />
+                              <Label fx:id="YourSiege2" alignment="CENTER" layoutX="10.0" layoutY="40.0" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="S11 - 36" GridPane.rowIndex="2" />
+                              <Label fx:id="YourPrice1" alignment="CENTER" layoutX="10.0" layoutY="40.0" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="24$" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="YourPrice2" alignment="CENTER" layoutX="144.0" layoutY="40.0" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="24$" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="check1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="17.0" prefWidth="11.0" styleClass="white-checkbox" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="check2" alignment="CENTER" contentDisplay="CENTER" layoutX="258.0" layoutY="46.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="11.0" styleClass="white-checkbox" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                              <Label fx:id="YourSiege3" alignment="CENTER" layoutX="10.0" layoutY="40.0" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="S11 - 36" GridPane.rowIndex="3" />
+                              <Label alignment="CENTER" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="S11 - 36" GridPane.rowIndex="4" />
+                              <Label fx:id="YourSiege4" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="S11 - 36" GridPane.rowIndex="4" />
+                              <Label fx:id="YourSiege5" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="S11 - 36" GridPane.rowIndex="5" />
+                              <Label fx:id="YourSiege6" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="S11 - 36" GridPane.rowIndex="6" />
+                              <Label fx:id="YourPrice3" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="24$" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="YourSiege7" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="S11 - 36" GridPane.rowIndex="7" />
+                              <Label fx:id="YourPrice4" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="24$" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="YourPrice5" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="24$" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label fx:id="YourPrice6" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="24$" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label fx:id="YourPrice7" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="24$" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <CheckBox fx:id="check7" alignment="CENTER" contentDisplay="CENTER" layoutX="258.0" layoutY="46.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="11.0" styleClass="white-checkbox" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                              <CheckBox fx:id="check6" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="16.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="11.0" styleClass="white-checkbox" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                              <CheckBox fx:id="check5" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="16.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="11.0" styleClass="white-checkbox" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                              <CheckBox fx:id="check4" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="16.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="11.0" styleClass="white-checkbox" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                              <CheckBox fx:id="check3" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="16.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="11.0" styleClass="white-checkbox" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <Button fx:id="resaleButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="7.0" prefWidth="278.0" styleClass="button-style2" stylesheets="@../Styles/stadebuilder.css" text="Resale">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="switchButton" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="167.0" mnemonicParsing="false" prefHeight="7.0" prefWidth="278.0" styleClass="button-style2" stylesheets="@../Styles/stadebuilder.css" text="Switch">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="381.0" prefWidth="259.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="27.0" prefWidth="150.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="323.0" styleClass="subtitle-text" text="Selected" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets top="35.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Line endX="70.0" startX="-50.0" startY="2.384185791015625E-6" stroke="WHITE" strokeWidth="3.0">
+                           <VBox.margin>
+                              <Insets bottom="15.0" />
+                           </VBox.margin>
+                        </Line>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="127.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.0" minWidth="10.0" prefWidth="95.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="92.0" minWidth="10.0" prefWidth="44.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label fx:id="Selected_Sec_Sig" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="S11 - 36" />
+                              <Label fx:id="Selected_Sec_Sig_price" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="24$" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                        <Label fx:id="SiegeState" alignment="TOP_LEFT" prefHeight="17.0" prefWidth="310.0" styleClass="subtitle-text" text="Available">
+                           <VBox.margin>
+                              <Insets left="20.0" right="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Button fx:id="BuyNowButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleBuyNowButton" prefHeight="19.0" prefWidth="278.0" stylesheets="@../Styles/stadebuilder.css" text="BUY NOW">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" top="10.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="button-style" />
+                              <String fx:value="bold" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </right>
+         <center>
+            <ScrollPane fx:id="StadePane" fitToHeight="true" fitToWidth="true" pannable="true" prefHeight="740.0" prefWidth="1239.0" BorderPane.alignment="CENTER">
+               <content>
+                  <Pane fx:id="StadeLayout" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="235.0" fitWidth="433.0" layoutX="625.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/stadeImg.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+         </center>
+         <bottom>
+            <Pane fx:id="TroublePane" pickOnBounds="false" prefHeight="0.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+      <Button fx:id="zoomInButton" layoutX="1559.0" layoutY="102.0" mnemonicParsing="false" onAction="#zoomInButtonClicked" prefHeight="45.0" prefWidth="45.0" styleClass="button-style" stylesheets="@../Styles/stadebuilder.css">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/plus-2-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="zoomOutButton" layoutX="1503.0" layoutY="102.0" mnemonicParsing="false" onAction="#zoomOutButtonClicked" prefHeight="45.0" prefWidth="45.0" styleClass="button-style" stylesheets="@../Styles/stadebuilder.css">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/minus-2-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <GridPane layoutY="857.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2px;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="63.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="137.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Circle fill="WHITE" radius="10.0" stroke="BLACK" strokeType="INSIDE" GridPane.halignment="CENTER" />
+            <Circle fill="RED" layoutX="42.0" layoutY="25.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Circle fill="BLUE" layoutX="42.0" layoutY="25.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Circle fill="ORANGE" layoutX="42.0" layoutY="25.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="Available" GridPane.columnIndex="1" />
+            <Label layoutX="73.0" layoutY="10.0" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="Sold" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label layoutX="73.0" layoutY="40.0" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="Resale" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label layoutX="73.0" layoutY="40.0" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="Switch" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Circle fill="GREEN" layoutX="44.0" layoutY="117.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Label layoutX="75.0" layoutY="102.0" prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="Vos  Sieges" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+   </children>
+</Pane>

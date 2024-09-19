@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane id="StadeBuilderId" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1010.0" prefWidth="1920.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StadeBuilderController">
+    <BorderPane prefHeight="1010.0" prefWidth="1920.0">
+    <stylesheets>
+        <URL value="@/Styles/stadebuilder.css" />
+    </stylesheets>
+    <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="83.0" prefWidth="1920.0" style="-fx-background-color: #34458d;" BorderPane.alignment="CENTER">
+            <children>
+               <Region prefHeight="83.0" prefWidth="30.0" />
+               <StackPane prefHeight="83.0" prefWidth="7.0">
+                  <children>
+                     <Circle fill="DODGERBLUE" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" wrappingWidth="18.984375">
+                        <font>
+                           <Font name="System Bold" size="27.0" />
+                        </font>
+                     </Text>
+                  </children>
+               </StackPane>
+               <Region prefHeight="83.0" prefWidth="12.0" />
+               <Text fx:id="UserName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Ayoub Zerdoum ">
+                  <font>
+                     <Font size="22.0" />
+                  </font>
+               </Text>
+               <Region prefHeight="83.0" prefWidth="124.0" />
+               <ImageView fx:id="MenuEvents" fitHeight="55.0" fitWidth="48.0" onMouseClicked="#handleEvents" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../img/list-2-128.png" />
+                  </image>
+               </ImageView>
+               <Region prefHeight="83.0" prefWidth="25.0" />
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="62.0" stroke="BLACK" strokeType="INSIDE" width="5.0" />
+               <Region prefHeight="83.0" prefWidth="25.0" />
+               <ImageView fitHeight="150.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../img/stadium-128.png" />
+                  </image>
+               </ImageView>
+            </children>
+      </HBox>
+   </top>
+   <right>
+      <VBox prefHeight="997.0" prefWidth="297.0" style="-fx-background-color: #c8c9d0;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefWidth="150.0" style="-fx-background-color: #c8c9d0;">
+               <children>
+                  <HBox prefHeight="27.0" prefWidth="150.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="23.0" prefWidth="297.0" styleClass="subtitle-text" text="Section" textFill="WHITE" HBox.hgrow="ALWAYS">
+                              <font>
+                                 <Font name="System Bold" size="14.0" />
+                              </font>
+                              <HBox.margin>
+                                 <Insets top="5.0" />
+                              </HBox.margin></Label>
+                     </children>
+                  </HBox>
+                     <Line endX="70.0" startX="-50.0" startY="2.384185791015625E-6" stroke="WHITE" strokeWidth="3.0">
+                        <VBox.margin>
+                           <Insets bottom="15.0" />
+                        </VBox.margin>
+                     </Line>
+                  <HBox layoutX="10.0" layoutY="10.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="ID" HBox.hgrow="ALWAYS">
+                              <HBox.margin>
+                                 <Insets left="15.0" />
+                              </HBox.margin></Label>
+                        <TextField id="SectionIdField" fx:id="sectionIdField" prefHeight="30.0" prefWidth="163.0" promptText="section id" styleClass="textfield-style" stylesheets="@../Styles/stadebuilder.css">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="37.0" prefHeight="24.0" prefWidth="287.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="Name" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" right="5.0" />
+                           </padding>
+                        </Label>
+                        <TextField id="SectionNameField" fx:id="sectionNameField" prefHeight="25.0" prefWidth="163.0" promptText="name" styleClass="textfield-style">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="112.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="Shape" HBox.hgrow="ALWAYS">
+                              <HBox.margin>
+                                 <Insets left="15.0" />
+                              </HBox.margin></Label>
+                        <TextField id="sectionShapeField" fx:id="sectionShapeField" prefHeight="25.0" prefWidth="163.0" promptText="Shape" styleClass="textfield-style" text="0">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="140.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="X" HBox.hgrow="ALWAYS">
+                              <HBox.margin>
+                                 <Insets left="15.0" />
+                              </HBox.margin></Label>
+                        <TextField id="sectionXField" fx:id="sectionXField" prefHeight="25.0" prefWidth="163.0" promptText="section X" styleClass="textfield-style">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="184.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="Y" HBox.hgrow="ALWAYS">
+                              <HBox.margin>
+                                 <Insets left="15.0" />
+                              </HBox.margin></Label>
+                        <TextField id="sectionYField" fx:id="sectionYField" prefHeight="25.0" prefWidth="163.0" promptText="section Y" styleClass="textfield-style">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="153.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="Scale" HBox.hgrow="ALWAYS">
+                              <HBox.margin>
+                                 <Insets left="15.0" />
+                              </HBox.margin></Label>
+                        <TextField id="sectionScaleField" fx:id="sectionScaleField" prefHeight="25.0" prefWidth="163.0" promptText="Scale" styleClass="textfield-style" text="1.0">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="289.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="Rotation" HBox.hgrow="ALWAYS">
+                              <HBox.margin>
+                                 <Insets left="15.0" />
+                              </HBox.margin></Label>
+                        <TextField id="sectionRotationField" fx:id="sectionRotationField" prefHeight="25.0" prefWidth="163.0" promptText="Rotation" styleClass="textfield-style">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Button fx:id="createNewSectionButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#createNewSection" prefHeight="31.0" prefWidth="279.0" styleClass="button-style" stylesheets="@../Styles/stadebuilder.css" text="Create New Section">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                     <HBox alignment="CENTER" prefHeight="23.0" prefWidth="297.0" spacing="5.0">
+                        <children>
+                        <Button fx:id="copySectionButton" mnemonicParsing="false" onAction="#copySection" prefHeight="38.0" prefWidth="90.0" styleClass="button-style" stylesheets="@../Styles/stadebuilder.css" text="Duplicate" />
+                        <Button fx:id="deleteSectionButton" mnemonicParsing="false" onAction="#deleteSection" prefHeight="31.0" prefWidth="90.0" styleClass="button-style" stylesheets="@../Styles/stadebuilder.css" text="Delete" />
+                        <Button fx:id="saveSectionButton" mnemonicParsing="false" onAction="#saveCurrentSection" prefHeight="45.0" prefWidth="90.0" styleClass="button-style" stylesheets="@../Styles/stadebuilder.css" text="Save" />
+                        </children>
+                     </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="381.0" prefWidth="259.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="27.0" prefWidth="150.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="323.0" styleClass="subtitle-text" text="Siege" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                              <HBox.margin>
+                                 <Insets top="35.0" />
+                              </HBox.margin></Label>
+                     </children>
+                  </HBox>
+                     <Line endX="70.0" startX="-50.0" startY="2.384185791015625E-6" stroke="WHITE" strokeWidth="3.0">
+                        <VBox.margin>
+                           <Insets bottom="15.0" />
+                        </VBox.margin>
+                     </Line>
+                  <HBox layoutX="10.0" layoutY="10.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="ID" HBox.hgrow="ALWAYS">
+                              <HBox.margin>
+                                 <Insets left="15.0" />
+                              </HBox.margin></Label>
+                        <TextField id="siegeIdField" fx:id="siegeIdField" prefHeight="25.0" prefWidth="163.0" promptText="section id" styleClass="textfield-style" text="1">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="37.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="Num" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" right="5.0" />
+                           </padding>
+                        </Label>
+                        <TextField id="siegeNumField" fx:id="siegeNumField" prefHeight="25.0" prefWidth="163.0" promptText="Siege Num" styleClass="textfield-style">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="112.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="Section id  " HBox.hgrow="ALWAYS">
+                              <HBox.margin>
+                                 <Insets left="15.0" />
+                              </HBox.margin></Label>
+                        <TextField id="siegeSectionIdField" fx:id="siegeSectionIdField" prefHeight="25.0" prefWidth="163.0" promptText="section id" styleClass="textfield-style">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="140.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="Radius" HBox.hgrow="ALWAYS">
+                              <HBox.margin>
+                                 <Insets left="15.0" />
+                              </HBox.margin></Label>
+                        <TextField id="siegeRadiusField" fx:id="siegeRadiusField" prefHeight="25.0" prefWidth="163.0" promptText="Siege Radius" styleClass="textfield-style">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="184.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="Scale" HBox.hgrow="ALWAYS">
+                              <HBox.margin>
+                                 <Insets left="15.0" />
+                              </HBox.margin></Label>
+                        <TextField id="siegeScaleField" fx:id="siegeScaleField" prefHeight="25.0" prefWidth="163.0" promptText="Siege Scale" styleClass="textfield-style">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="153.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="X" HBox.hgrow="ALWAYS">
+                              <HBox.margin>
+                                 <Insets left="15.0" />
+                              </HBox.margin></Label>
+                        <TextField id="siegeXField" fx:id="siegeXField" prefHeight="25.0" prefWidth="163.0" promptText="siege x" styleClass="textfield-style">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="289.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="150.0" styleClass="label-style" text="Y" HBox.hgrow="ALWAYS">
+                              <HBox.margin>
+                                 <Insets left="15.0" />
+                              </HBox.margin></Label>
+                        <TextField id="siegeYField" fx:id="siegeYField" prefHeight="25.0" prefWidth="163.0" promptText="siege y" styleClass="textfield-style">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Button fx:id="createNewSiegeButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#createNewSiege" prefHeight="45.0" prefWidth="278.0" styleClass="button-style" stylesheets="@../Styles/stadebuilder.css" text="Create New Siege">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                        <children>
+                        <Button fx:id="copySiegeButton" mnemonicParsing="false" onAction="#copySiege" prefHeight="45.0" prefWidth="90.0" styleClass="button-style" text="Duplicate" />
+                        <Button fx:id="deleteSiegeButton" mnemonicParsing="false" onAction="#deleteSiege" prefHeight="45.0" prefWidth="90.0" styleClass="button-style" text="Delete" />
+                        <Button fx:id="saveSiegeButton" mnemonicParsing="false" onAction="#saveCurrentSiege" prefHeight="45.0" prefWidth="90.0" styleClass="button-style" text="Save" />
+                        </children>
+                        <VBox.margin>
+                           <Insets />
+                        </VBox.margin>
+                     </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <ScrollPane fx:id="StadePane" fitToHeight="true" fitToWidth="true" pannable="true" prefHeight="740.0" prefWidth="1239.0" BorderPane.alignment="CENTER">
+         <content>
+            <Pane fx:id="StadeLayout" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fitHeight="235.0" fitWidth="433.0" layoutX="625.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/stadeImg.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+   </center>
+   <bottom>
+      <Pane fx:id="TroublePane" pickOnBounds="false" prefHeight="0.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
+   <Button fx:id="saveChangesButton" layoutX="1374.0" layoutY="921.0" mnemonicParsing="false" onAction="#saveChangesToDatabase" prefHeight="66.0" prefWidth="229.0" style="-fx-background-radius: 0;" styleClass="saveButton" stylesheets="@../Styles/stadebuilder.css" text="Save changes">
+      <font>
+         <Font size="24.0" />
+      </font>
+   </Button>
+   <Button fx:id="zoomInButton" layoutX="1559.0" layoutY="102.0" mnemonicParsing="false" onAction="#zoomInButtonClicked" prefHeight="45.0" prefWidth="45.0" styleClass="button-style" stylesheets="@../Styles/stadebuilder.css">
+      <graphic>
+         <ImageView fitHeight="150.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../img/plus-2-48.png" />
+            </image>
+         </ImageView>
+      </graphic></Button>
+   <Button fx:id="zoomOutButton" layoutX="1503.0" layoutY="102.0" mnemonicParsing="false" onAction="#zoomOutButtonClicked" prefHeight="45.0" prefWidth="45.0" styleClass="button-style" stylesheets="@../Styles/stadebuilder.css">
+      <graphic>
+         <ImageView fitHeight="150.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../img/minus-2-48.png" />
+            </image>
+         </ImageView>
+      </graphic></Button>
+</Pane>
