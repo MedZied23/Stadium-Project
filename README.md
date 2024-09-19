@@ -1,8 +1,9 @@
 # Stadium Concert Ticket Sales Application
 
 Developed as an academic project by:
-- Ayoub ZERDOUM
 - Mohamed Zied BOUOUD
+- Ayoub ZERDOUM
+
 
 ## TECH used 
 <ul>
